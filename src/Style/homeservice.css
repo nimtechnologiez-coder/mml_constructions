@@ -1,0 +1,648 @@
+/* --- GLOBAL WRAPPER --- */
+.home-content-wrapper {
+    background: #ffffff;
+    overflow-x: hidden;
+}
+
+/* --- SERVICES SECTION --- */
+.services-section {
+    padding: 4rem 10%;
+    font-family: 'Inter', sans-serif;
+}
+
+.services-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.services-header h2 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.services-header h2 span {
+    font-weight: 800;
+}
+
+.arrow-right-red {
+    display: flex;
+    align-items: center;
+}
+
+.arrow-right-red .line {
+    width: 50px;
+    height: 2.5px;
+    background-color: #ff2a13;
+}
+
+.arrow-right-red .head {
+    color: #ff2a13;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: -5px;
+}
+
+/* SERVICES GRID */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* SERVICE CARD */
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.service-image-wrapper {
+    height: 170px;
+    padding: 10px;
+    transition: all 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.service-card:hover .service-image-wrapper {
+    height: 260px;
+    padding: 15px;
+}
+
+.service-title-block {
+    background: #ff2a13;
+    color: #ffffff;
+    padding: 0.9rem;
+    /* Perfectly balanced for the floating look */
+    text-align: center;
+    font-weight: 700;
+    border-radius: 12px;
+    /* Soft architectural rounding */
+    margin: 0 15px 15px;
+    /* Floating margin as seen in reference */
+    transition: all 0.3s ease;
+    opacity: 1;
+}
+
+.service-card:hover .service-title-block {
+    opacity: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* TOP ROW (9th Card, Branding, Desc) */
+.layout-row-top {
+    display: grid;
+    grid-template-columns: 260px 220px 1fr;
+    /* card | branding | text */
+    column-gap: 60px;
+    /* 🔥 THIS creates the exact gap you want */
+    align-items: start;
+}
+
+.branding-box {
+    grid-column: 2 / 3;
+    justify-self: start;
+    /* move box to right */
+    text-align: start;
+    margin-left: 50px;
+    /* align text inside */
+}
+
+.branding-box h3 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+.branding-box p {
+    font-size: 2.2rem;
+    font-weight: 400;
+    margin: 0;
+    line-height: 1.1;
+}
+
+.description-box {
+    grid-column: 3 / 5;
+    padding-top: 95px;
+    max-width: 100%;
+    font-size: 0.97rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #333;
+}
+
+
+
+/* SHOWCASE */
+.showcase-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.why-mml-box {
+    grid-column: 1 / 3;
+    padding-top: 8rem;
+}
+
+.why-mml-box h2 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 1.1;
+    margin: 0;
+    word-wrap: break-word;
+}
+
+.why-mml-header {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+@media (max-width: 768px) {
+    .why-mml-box h2 {
+        font-size: 1.8rem;
+    }
+}
+
+.why-mml-box h2 span {
+    font-weight: 800;
+}
+
+.red-arrow-indicator {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.showcase-image-container {
+    grid-column: 3 / 5;
+    align-self: start;
+    /* 🔥 THIS moves it up */
+    margin-top: -30px;
+    display: flex;
+    justify-content: flex-end
+        /* small controlled shift */
+
+}
+
+.showcase-image-container img {
+    width: 80%;
+    /* reduce size */
+    height: auto;
+    /* keep aspect ratio */
+    object-fit: contain;
+    display: block;
+}
+
+/* --- TRUST SECTION --- */
+.trust-section {
+    padding: 0rem 10%;
+    background: #ffffff;
+}
+
+.trust-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2.5fr;
+    /* MONUMENTAL SPACE FOR THE HERO IMAGE */
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+.trust-points-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+}
+
+.trust-item {
+    margin-bottom: 3rem;
+    /* Spacing between points */
+}
+
+.trust-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.trust-icon-svg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.trust-icon-svg {
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+.trust-text h4 {
+    font-size: 1.3rem;
+    /* Bolder titles */
+    font-weight: 800;
+    margin: 0;
+    color: #000;
+}
+
+.trust-item p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    width: 390px;
+    font-weight: 500;
+    padding-left: 1rem;
+    /* PERFECT ALIGNMENT WITH START OF TITLE TEXT */
+}
+
+.worker-image-box {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    margin-top: -4rem;
+    /* DEEPER OVERFLOW FOR ARCHITECTURAL EFFECT */
+}
+
+.worker-image-box img {
+    width: 350%;
+    height: 700px;
+    /* MONUMENTAL HEIGHT */
+    max-width: none;
+    object-fit: contain;
+    object-fit: contain;
+    /* keeps full image visible */
+    transform: translateX(220px);
+}
+
+/* --- CTA SECTION --- */
+.cta-banner {
+    padding: 5rem 10%;
+    text-align: center;
+    border-top: 1px solid #eee;
+}
+
+.cta-banner h3 {
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+
+.cta-banner h3 span {
+    color: #ff2a13;
+}
+
+.cta-banner p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+/* --- FOOTER --- */
+.main-footer {
+    background: #f9f9f9;
+    padding: 5rem 10% 3rem;
+    border-top: 1px solid #eee;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr 1fr;
+    gap: 4rem;
+}
+
+.footer-logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.red-text {
+    color: #ff2a13;
+}
+
+.footer-tagline {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.footer-desc {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.footer-col h4 {
+    font-size: 1.1rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    color: #444;
+    cursor: pointer;
+}
+
+.footer-col.contact p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    color: #444;
+}
+
+.social-row {
+    display: flex;
+    gap: 1.5rem;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1200px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .layout-row-top {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .branding-box,
+    .description-box {
+        grid-column: 1 / -1;
+        padding-top: 0;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .showcase-row {
+        display: flex;
+        flex-direction: column-reverse;
+        /* Put image above heading on mobile */
+        gap: 0;
+    }
+
+    .why-mml-box,
+    .showcase-image-container {
+        grid-column: 1 / -1;
+        padding-top: 0;
+        margin-top: 0;
+    }
+
+    .trust-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .trust-points-container {
+        width: 100%;
+    }
+
+    .worker-image-box {
+        justify-content: center;
+        margin-top: 2rem;
+    }
+
+    .worker-image-box img {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        transform: none;
+        /* Reset desktop shift */
+    }
+
+
+
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .services-section,
+    .trust-section,
+    .cta-banner,
+    .main-footer {
+        padding: 3rem 5%;
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .layout-row-top,
+    .showcase-row,
+    .services-grid {
+        display: contents;
+        /* Allow children to be reordered by the parent flex container */
+    }
+
+    .services-header {
+        order: 1 !important;
+    }
+
+    /* First card in the grid gets order 2 */
+    .services-grid>.service-card:nth-child(1) {
+        order: 2 !important;
+    }
+
+    /* FM2 Laser card gets order 3 */
+    .card-9-box {
+        order: 5;
+    }
+
+    /* All other cards in the grid get order 4 */
+    .services-grid>.service-card {
+        order: 4 !important;
+    }
+
+    .branding-box {
+        order: 5;
+    }
+
+    .showcase-image-container {
+        order: 6;
+        padding: 0 20px;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .description-box {
+        order: 7;
+    }
+
+    .why-mml-box {
+        order: 8;
+    }
+
+    .branding-box h3 {
+        font-size: 3rem;
+        /* Larger as seen in screenshot */
+        font-weight: 800;
+        text-align: left;
+        padding-left: 20px;
+        margin-bottom: 0.5rem;
+    }
+
+    .branding-box p {
+        font-size: 2.5rem;
+        font-weight: 400;
+        text-align: left;
+        padding-left: 20px;
+        line-height: 1;
+        margin-bottom: 2rem;
+    }
+
+    .description-box p {
+        padding: 0 20px;
+        text-align: left;
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #444;
+        margin-bottom: 3rem;
+    }
+
+    /* Remove the duplicate/conflicting showcase-image-container rule if it exists */
+
+
+    .services-header h2 {
+        font-size: 1.8rem;
+        text-align: center;
+        width: auto;
+    }
+
+    .services-header {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+
+    .arrow-right-red {
+        display: none;
+    }
+
+
+    .trust-points-container {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .trust-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 10%;
+        margin-bottom: 3rem;
+    }
+
+    .trust-item img {
+        margin-bottom: 1rem;
+    }
+
+    .trust-item h4 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .trust-item p {
+        padding-left: 0;
+        text-align: center;
+        font-size: 1.1rem;
+        line-height: 1.5;
+    }
+
+    .trust-header {
+        justify-content: center;
+    }
+
+    .worker-image-box {
+        margin-top: -1rem;
+        overflow: hidden;
+        width: 90%;
+        transform: scale(1.3);
+        display: flex;
+        justify-content: center;
+    }
+
+    .worker-image-box img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        transform: none;
+        object-fit: cover;
+    }
+
+    .why-mml-box {
+        text-align: left;
+        width: 100%;
+        padding-left: 20px;
+        margin: 0;
+    }
+
+    .why-mml-header {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .why-mml-box h2 {
+        text-align: left;
+        font-size: 2.2rem;
+        /* Larger heading */
+        width: auto;
+        margin-bottom: 0;
+    }
+
+    .red-arrow-indicator {
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .social-row {
+        justify-content: center;
+    }
+
+    .cta-banner h3 {
+        font-size: 1.5rem;
+    }
+}

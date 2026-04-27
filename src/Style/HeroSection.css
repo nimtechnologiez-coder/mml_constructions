@@ -1,16 +1,16 @@
 /* Hero Section */
-.hero {
+.heros {
   padding: 60px 5% 40px;
   background-color: var(--white);
 }
 
-.hero-container {
+.heros-container {
   max-width: 1400px;
   margin: 0 auto;
   text-align: center;
 }
 
-.hero-subtitle {
+.heros-subtitle {
   display: block;
   font-size: 22px;
   font-weight: 500;
@@ -19,7 +19,7 @@
   margin-bottom: 60px;
 }
 
-.hero-title {
+.heros-title {
   font-size: 72px;
   font-weight: 800;
   color: #1a1a1a;
@@ -28,11 +28,11 @@
   text-align: center;
 }
 
-.highlight-red {
+.highlights-red {
   color: var(--primary-red);
 }
 
-.hero-description {
+.heros-description {
   font-size: 18px;
   line-height: 1.6;
   color: var(--text-gray);
@@ -43,7 +43,7 @@
 }
 
 
-.hero-divider {
+.heros-divider {
   width: 90%;
   /* not full width → gives left/right spacing */
   height: 2px;
@@ -56,18 +56,18 @@
 
 
 @media (max-width: 1024px) {
-  .hero-title {
+  .heros-title {
     font-size: 56px;
   }
 }
 
 @media (max-width: 768px) {
-  .hero-title {
+  .heros-title {
     font-size: 40px;
     letter-spacing: -1px;
   }
 
-  .hero-description {
+  .heros-description {
     font-size: 18px;
   }
 }

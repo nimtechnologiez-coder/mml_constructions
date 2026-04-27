@@ -79,7 +79,15 @@ const Navbar = () => {
                 )}
               </div>
             </li>
-
+            <li>
+              <NavLink 
+                to="/" 
+                className={({ isActive }) => (isActive ? "active" : "")}
+                onClick={() => isOpen && toggleMenu()}
+              >
+                Home
+              </NavLink>
+            </li>
             <li>
               <NavLink 
                 to="/about" 
@@ -91,7 +99,7 @@ const Navbar = () => {
             </li>
             <li>
               <NavLink 
-                to="/" 
+                to="/service" 
                 className={({ isActive }) => (isActive ? "active" : "")}
                 onClick={() => isOpen && toggleMenu()}
               >

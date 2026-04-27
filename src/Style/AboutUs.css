@@ -37,7 +37,7 @@
 }
 
 
-.about-hero .hero-description {
+.about-hero .heros-description {
   font-size: 20px;
   /* Increased from 18px */
   line-height: 1.6;
@@ -310,7 +310,7 @@
     margin-bottom: 25px;
   }
 
-  .about-hero .hero-description {
+  .about-hero .heros-description {
     font-size: 16px;
     margin-bottom: 40px;
   }

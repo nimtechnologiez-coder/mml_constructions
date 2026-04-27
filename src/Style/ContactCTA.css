@@ -1,0 +1,46 @@
+.cta-section {
+  padding: 40px 5% 60px; /* Reduced padding */
+  background-color: var(--white);
+  text-align: center;
+}
+
+.cta-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.cta-section h2 {
+  font-size: 36px; /* Slightly larger as in screenshot */
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 20px; /* Reduced gap */
+  line-height: 1.2;
+}
+
+.highlight-red {
+  color: var(--primary-red);
+}
+
+
+.cta-button {
+  background-color: var(--primary-red);
+  color: var(--white);
+  border: none;
+  padding: 12px 35px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #e63700;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .cta-section h2 {
+    font-size: 24px;
+  }
+}

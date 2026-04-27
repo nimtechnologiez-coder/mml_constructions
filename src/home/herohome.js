@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../Style/herohome.css";
+import { Link } from "react-router-dom";
+
 
 // Import images
 import hero1 from "../Images/hero1.png";
@@ -31,7 +33,9 @@ const HeroHome = () => {
         <p className="hero-description">
           Book expert floor service professionals in just a few clicks.
         </p>
-        <button className="btn-book">Book a service</button>
+        <Link to="/service">
+  <button className="btn-book">Book a service</button>
+</Link>
       </div>
 
       <div className="hero-image-container">

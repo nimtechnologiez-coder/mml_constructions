@@ -2,6 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logoImg from "../Images/logo.png";
 import "../Style/Footer.css";
+import mailicon from "../Images/mailicon.png";
+import phoneicon from "../Images/phoneicon.png";
+import locationicon from "../Images/locationicon.png";
+import instaicon from "../Images/instaicon.png";
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -40,15 +44,21 @@ const Footer = () => {
           <h3>Contact Us</h3>
           <ul className="contact-list">
             <li>
-              <span className="icon">📞</span>
+              <span className="method-icon">
+                <img src={phoneicon} alt="phoneicon" width="20" height="20" />
+              </span>
               <a href="tel:+918610013355" className="contact-link">+91 86100 13355</a>
             </li>
             <li>
-              <span className="icon">✉️</span>
+              <span className="method-icon">
+               <img src={mailicon} alt="mailicon" width="20" height="20" />
+              </span>
               <a href="mailto:mmlconstruction61@gmail.com" className="contact-link">mmlconstruction61@gmail.com</a>
             </li>
             <li>
-              <span className="icon">📍</span>
+              <span className="method-icon">
+               <img src={locationicon} alt="locationicon" width="20" height="20" />
+              </span>
               <span>#7 Krapangavanayagar koil Street,<br />
                 Kannadapalayam, Chennai - 600123</span>
             </li>
@@ -62,7 +72,9 @@ const Footer = () => {
           <div className="social-icons">
             <span className="social-icon">in</span>
             <span className="social-icon">f</span>
-            <span className="social-icon">ig</span>
+            <span className="method-icon">
+               <img src={instaicon} alt="instaicon" width="30" height="30" />
+              </span>
           </div>
         </div>
       </div>

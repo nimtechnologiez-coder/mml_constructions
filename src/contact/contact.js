@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../Style/contact.css";
+import API_BASE_URL from "../config";
 
 import mailicon from "../Images/mailicon.png"
 import phoneicon from "../Images/phoneicon.png"
@@ -12,6 +13,8 @@ const Contact = () => {
     phone: "",
     message: "",
   });
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -19,10 +22,49 @@ const Contact = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Submitted:", formData);
-    alert("Message sent successfully!");
+    setLoading(true);
+    setError(null);
+
+    // Map frontend fields to backend fields
+    const payload = {
+      service: formData.service,
+      full_name: formData.fullName,
+      email: formData.email,
+      phone_number: formData.phone,
+      message: formData.message,
+    };
+
+    try {
+      const response = await fetch(`${API_BASE_URL}/api/submit/`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        alert("Message sent successfully!");
+        setFormData({
+          service: "",
+          fullName: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
+      } else {
+        setError(data.message || "Failed to send message. Please try again.");
+      }
+    } catch (err) {
+      setError("Network error. Please make sure the backend is running.");
+      console.error("Submission error:", err);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -64,6 +106,8 @@ const Contact = () => {
 
         {/* Right Column */}
         <form className="contact-form-side" onSubmit={handleSubmit}>
+          {error && <div className="error-message" style={{ color: "red", marginBottom: "10px" }}>{error}</div>}
+          
           <div className="form-field">
             <label>Service</label>
             <select 
@@ -131,8 +175,8 @@ const Contact = () => {
           </div>
           <p className="char-counter">{formData.message.length}/200 Characters</p>
 
-          <button type="submit" className="submit-button">
-            Submit
+          <button type="submit" className="submit-button" disabled={loading}>
+            {loading ? "Sending..." : "Submit"}
           </button>
         </form>
       </div>

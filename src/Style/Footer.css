@@ -135,6 +135,21 @@
   margin: 40px auto 0;
 }
 
+.footer-developed {
+  text-align: center;
+  padding: 14px 10px;
+  font-size: 14px;
+  color: #ff0000;
+  letter-spacing: 0.4px;
+}
+
+.footer-developed span {
+  color: #e60000;
+  font-weight: 600;
+}
+
+
+
 @media (max-width: 992px) {
   .footer-container {
     grid-template-columns: repeat(2, 1fr);
